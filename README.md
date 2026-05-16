@@ -44,7 +44,7 @@ portfolio リポジトリとは別に、
 - MLflow による実験管理を導入
 - Docker 化 / SageMaker deploy を今後実施予定
 
-📁 `electricity-demand-forecast/`
+[電力需要予測のリンク](/projects/electricity-demand-forecast/README.md)
 
 ---
 
