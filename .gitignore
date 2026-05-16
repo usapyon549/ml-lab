@@ -12,7 +12,7 @@ __pycache__/
 **/data/*
 !**/data/sample/
 !**/data/sample/**
-# !**/data/README.md
+!**/data/README.md
 **/models/*
 
 # mlflow系
