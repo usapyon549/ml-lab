@@ -1,0 +1,14 @@
+# Build command : docker build -t predict .
+# Run command: docker run predict
+
+FROM python:3.12
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
+COPY . .
+
+CMD ["python", "src/predict.py"]

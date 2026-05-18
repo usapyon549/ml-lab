@@ -42,7 +42,8 @@ portfolio リポジトリとは別に、
 
 - baseline → feature engineering により精度改善
 - MLflow による実験管理を導入
-- Docker 化 / SageMaker deploy を今後実施予定
+- Docker container で推論実行を確認
+- SageMaker deploy を今後実施予定
 
 [電力需要予測のリンク](/projects/electricity-demand-forecast/README.md)
 
@@ -52,10 +53,12 @@ portfolio リポジトリとは別に、
 
 - Python
 - pandas
+- numpy
 - scikit-learn
 - LightGBM
 - MLflow
 - SHAP
+- Docker
 
 ---
 

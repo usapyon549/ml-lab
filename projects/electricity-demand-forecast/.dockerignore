@@ -1,0 +1,22 @@
+# notebook
+notebooks/
+
+# mlflow
+*/mlruns/
+
+# raw data
+data/raw/
+data/raw/tmp
+data/processed/jma
+data/processed/jma_tepco_merged
+data/processed/tepco
+
+# cache
+__pycache__/
+.ipynb_checkpoints/
+
+# git
+.git/
+
+# venv
+.venv/
