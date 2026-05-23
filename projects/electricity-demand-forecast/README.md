@@ -8,6 +8,8 @@
 - feature engineering
 - MLflow
 - SHAP analysis
+- fastAPI
+- Docker
 
 ---
 
@@ -25,20 +27,36 @@ https://www.tepco.co.jp/forecast/html/area_data-j.html
 
 ---
 
-## Notes
-
-- 気温依存性が強い
-- 曜日特徴量が有効
-- lag / rolling 特徴量が有効
-- 気温・時間特徴量は、feature importance / SHAP の両方で寄与が大きい
-- 気象特徴量には、有効なものと寄与の小さいものが存在
-
----
-
-## Result
+## 予測モデル精度
 
 MAE：
 
 ```text
 baseline: 2176
 improved: 1093
+```
+
+---
+
+## Notes
+
+### 電力需要予測モデル
+- 気温依存性が強い
+- sin/cos化が有効
+- 曜日特徴量が有効
+- lag / rolling 特徴量が有効
+- 気温・時間特徴量は、feature importance / SHAP の両方で寄与が大きい
+- 気象特徴量には、有効なものと寄与の小さいものが存在
+
+### 予測モデルのAPI/コンテナ化
+- FastAPI により推論 API を実装
+- Docker により推論環境をコンテナ化
+- /ping、/invocations endpoint を実装
+- Notebook → HTTP request → model prediction の動作を確認
+- pathlib.Path により、ローカル / Docker 間の path 差異を吸収
+- 学習時の feature 順序を config 管理し、推論時に統一
+- JSON 経由での NaN / null handling を実装
+- 軽量 image (python:3.12-slim) を利用
+- LightGBM 実行に必要な OS library (libgomp1) を追加
+
+
