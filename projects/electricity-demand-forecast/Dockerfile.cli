@@ -1,0 +1,17 @@
+# コマンドラインで動かすコンテナ
+# Build command : docker build -f Dockerfile.cli -t predict-cli .
+# Run command: docker run --rm predict-cli data/processed/dataset/X_test.csv
+# --rmはコンテナが停止した瞬間に自動でコンテナごと消滅する。不要なコンテナをためない。
+
+
+FROM python:3.12
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
+COPY . .
+
+ENTRYPOINT ["python", "src/predict.py"]
