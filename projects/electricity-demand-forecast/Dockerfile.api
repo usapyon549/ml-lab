@@ -1,6 +1,6 @@
 # fastAPIで動かすコンテナ
-# Build command : docker build -f Dockerfile.api -t predict-api .
-# Run command: docker run --rm -p 8000:8000 predict-api
+# Build command(ローカル確認用) : docker build -f Dockerfile.api -t predict-api .
+# Run command(ローカル確認用): docker run --rm -p 8000:8000 predict-api
 # --rmはコンテナが停止した瞬間に自動でコンテナごと消滅する。不要なコンテナをためない。
 
 FROM python:3.12-slim

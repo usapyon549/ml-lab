@@ -17,6 +17,9 @@ __pycache__/
 !**/models/.gitkeep
 **/model/*
 
+# awsの設定情報
+~/.aws/credentials
+~/.aws/config
 
 # mlflow系
 **/mlruns/
