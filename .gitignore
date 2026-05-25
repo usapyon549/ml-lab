@@ -16,6 +16,7 @@ __pycache__/
 **/models/*
 !**/models/.gitkeep
 **/model/*
+**/model.tar.gz
 
 # awsの設定情報
 ~/.aws/credentials
@@ -36,6 +37,9 @@ __pycache__/
 
 # vscode
 **/.vscode/
+
+# 一時的なメモフォルダ
+**/tmp/
 
 # C extensions
 *.so

@@ -47,6 +47,31 @@ portfolio リポジトリとは別に、
 
 [電力需要予測のリンク](/projects/electricity-demand-forecast/README.md)
 
+## 2. demand-forecast-sagemaker-deploy
+
+1.electricity-demand-forecastで作成したモデルを、SageMakerにデプロイする。
+
+### What I tried
+
+
+### Current status
+
+- sagemaker inference toolkitを用いて、ローカルでコンテナ作成中。
+
+[電力需要予測モデルのSageMakerデプロイのリンク](/projects/demand-forecast-sagemaker-deploy/README.md)
+
+## 3. banking-marketing(実施予定)
+
+Huging Faceの公開データセットをもとに、銀行のマーケティング成否の予測。
+
+### What I WILL try
+
+- マーケティング成否の２値分類モデル
+- 複数モデルの比較(lightGBM, SVM, LogisticRegression)
+- 不均衡データの予測
+- 正規化を含めた前処理
+- 簡易アンサンブル学習の実施(XGboostを用いて、lightGBM、SVM, LogisticRegressionの３モデルの予測結果をstacking)
+
 ---
 
 # Tech Stack
