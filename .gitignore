@@ -19,8 +19,8 @@ __pycache__/
 **/model.tar.gz
 
 # awsの設定情報
-~/.aws/credentials
-~/.aws/config
+**/.aws/credentials
+**/.aws/config
 
 # mlflow系
 **/mlruns/

@@ -1,0 +1,44 @@
+
+# Build command(ローカル確認用) : 
+# docker build --no-cache --platform linux/amd64 --progress=plain -f Dockerfile.sagemaker -t demand-forecast-sagemaker .
+
+# Run コマンド (ローカル確認用):
+# docker run --platform linux/amd64 --rm -p 8080:8080 demand-forecast-sagemaker
+
+# ローカルで推論の動作確認まで行う場合：
+# docker run --platform linux/amd64 --rm -p 8080:8080 \
+#   -v $(pwd)/model:/opt/ml/model \
+#   demand-forecast-sagemaker
+
+
+FROM python:3.10-slim
+
+# MMSの起動に必要な Java (default-jre) と lightgbmに必要なlibgomp1 をインストール
+RUN apt-get update && apt-get install -y \
+    libgomp1 \
+    default-jre \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --upgrade pip
+
+# multi-model-server を明示的にインストール一覧に追記
+RUN pip install --no-cache-dir \
+    sagemaker-inference \
+    multi-model-server \
+    lightgbm \
+    pandas \
+    scikit-learn \
+    numpy
+
+# pipで入ったバイナリの場所をパスに通す
+ENV PATH="/usr/local/bin:/root/.local/bin:${PATH}"
+
+# inference.pyの場所を明示
+ENV PYTHONPATH="/opt/ml/code"
+
+COPY inference.py /opt/ml/code/inference.py
+
+ENV SAGEMAKER_PROGRAM=inference.py
+ENV SAGEMAKER_SUBMIT_DIRECTORY=/opt/ml/code
+
+ENTRYPOINT ["python", "-c", "from sagemaker_inference import model_server; model_server.start_model_server()"]

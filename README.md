@@ -43,20 +43,28 @@ portfolio リポジトリとは別に、
 - baseline → feature engineering により精度改善
 - MLflow による実験管理を導入
 - Docker container で推論実行を確認
-- SageMaker deploy を今後実施予定
 
 [電力需要予測のリンク](/projects/electricity-demand-forecast/README.md)
 
 ## 2. demand-forecast-sagemaker-deploy
 
-1.electricity-demand-forecastで作成したモデルを、SageMakerにデプロイする。
+`electricity-demand-forecast` で作成した LightGBM モデルを、  
+Amazon SageMaker のサーバーレスエンドポイントへデプロイ。
 
 ### What I tried
-
+- SageMaker custom inference container の構築
+- sagemaker-inference を用いた推論サーバー実装
+- Apple Silicon 環境からの amd64 build
+- ECR へのコンテナ push
+- SageMaker Serverless Endpoint
+- boto3 invoke_endpoint() による疎通確認
+- CloudWatch を用いたコンテナ障害調査
 
 ### Current status
-
-- sagemaker inference toolkitを用いて、ローカルでコンテナ作成中。
+- custom inference container による deploy 成功
+- SageMaker endpoint が InService で稼働確認済み
+- notebook から推論レスポンス取得済み
+- ハマりどころ・対応内容を README に整理
 
 [電力需要予測モデルのSageMakerデプロイのリンク](/projects/demand-forecast-sagemaker-deploy/README.md)
 
@@ -84,6 +92,9 @@ Huging Faceの公開データセットをもとに、銀行のマーケティン
 - MLflow
 - SHAP
 - Docker
+- AWS SageMaker
+- AWS ECR
+- boto3
 
 ---
 

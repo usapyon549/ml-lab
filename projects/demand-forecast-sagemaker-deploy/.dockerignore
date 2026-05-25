@@ -1,0 +1,24 @@
+# notebook
+notebooks/
+
+# data
+data/
+
+# cache
+__pycache__/
+.ipynb_checkpoints/
+
+# git
+.git/
+
+# venv
+.venv/
+
+# vscode
+.vscode/
+
+# model
+model/
+
+# pyenv
+.python-version
