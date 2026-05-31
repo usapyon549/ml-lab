@@ -68,33 +68,62 @@ Amazon SageMaker のサーバーレスエンドポイントへデプロイ。
 
 [電力需要予測モデルのSageMakerデプロイのリンク](/projects/demand-forecast-sagemaker-deploy/README.md)
 
-## 3. banking-marketing(実施予定)
+## 3. banking-marketing
 
-Huging Faceの公開データセットをもとに、銀行のマーケティング成否の予測。
+Banking Marketing Dataset を用いた定期預金契約有無の分類予測。
 
-### What I WILL try
+クラス不均衡データを対象に、複数モデルの比較や前処理の影響を検証。
 
-- マーケティング成否の２値分類モデル
-- 複数モデルの比較(lightGBM, SVM, LogisticRegression)
-- 不均衡データの予測
-- 正規化を含めた前処理
-- 簡易アンサンブル学習の実施(XGboostを用いて、lightGBM、SVM, LogisticRegressionの３モデルの予測結果をstacking)
+### What I tried
+- LightGBM
+- Logistic Regression
+- Support Vector Machine (SVM)
+- class_weight を用いた不均衡データ対応
+- StandardScaler による特徴量スケーリング
+- Recall / F1 を用いたモデル評価
+- MLflow による experiment tracking
+- StackingClassifier を用いたアンサンブル学習
+
+### Current status
+- LightGBM・Logistic Regression・SVM の比較完了
+- 不均衡データにおける Accuracy の限界を確認
+- class_weight による Recall 改善を確認
+- SVM における標準化の重要性を確認
+- StackingClassifier によるアンサンブル学習を検証
+- 単体モデルとアンサンブルモデルの性能差を比較
+
+[banking-marketingのリンク](/projects/banking-marketing/README.md)
 
 ---
 
 # Tech Stack
+
+### Machine Learning
 
 - Python
 - pandas
 - numpy
 - scikit-learn
 - LightGBM
+- XGBoost
 - MLflow
 - SHAP
+
+### MLOps
+
 - Docker
 - AWS SageMaker
 - AWS ECR
 - boto3
+
+### Modeling Topics
+
+- Time Series Forecasting
+- Binary Classification
+- Class Imbalance Handling
+- Ensemble Learning (Stacking)
+- Feature Engineering
+- Model Interpretation
 
 ---
 
