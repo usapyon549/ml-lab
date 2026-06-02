@@ -1,0 +1,16 @@
+
+# ベクトルデータベース
+vector_db:
+    path: "../notebooks/chroma_db"
+    collection_name: "portfolio_rag"
+
+# embedding model
+embedding_model:
+    model: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2" 
+
+# gemini
+gemini:
+  model: "gemini-3-flash-preview"
+  generation_config: 
+    {"temperature": 0.2, "max_output_tokens": 1500}
+ 

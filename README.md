@@ -99,35 +99,38 @@ Banking Marketing Dataset を用いた定期預金契約有無の分類予測。
 
 ## 4. portfolio-rag-assistant
 
-ポートフォリオおよび機械学習プロジェクトのドキュメントを対象とした RAG (Retrieval-Augmented Generation) アプリケーション。
+ポートフォリオ情報を自然言語で検索できる RAG アシスタント。
 
-Embedding・ベクトル検索・LLM API を組み合わせ、自然言語によるプロジェクト検索および質問応答を実装。
+SentenceTransformer、ChromaDB、Gemini API を組み合わせ、  
+ベクトル検索と生成AIを利用した検索システムを構築。
 
 ### What I tried
 
-* Sentence Transformers による Embedding
-* ChromaDB による Vector Database
-* Cosine Similarity を用いたベクトル検索
+* SentenceTransformer
+* Embedding
+* cosine similarity
+* ChromaDB
 * Chunking
-* Metadata 管理
-* Retrieval-Augmented Generation (RAG)
+* Top-K Retrieval
 * Gemini API
 * Prompt Engineering
+* Streamlit
+* RAG (Retrieval-Augmented Generation)
 
-### Current Status
+### Current status
 
-* Embedding による意味ベクトル化を実装
-* Cosine Similarity による類似文検索を実装
+* Embedding の仕組みを検証
+* cosine similarity による類似度計算を実装
 * ChromaDB によるベクトル検索を実装
-* Chunk Size / Top-K の挙動を検証
+* Chunking による文書分割を実装
+* Top-K Retrieval を実装
 * Gemini API を利用した回答生成を実装
-* RAG によるプロジェクト横断検索を実装
-* Prompt Engineering による回答品質改善を実施
-* Streamlit アプリ化を予定
+* Prompt Engineering により回答品質を改善
+* Streamlit による Web UI を構築
+* Streamlit Cache により Embedding モデルの再ロードを防止
+* Portfolio RAG Assistant として動作確認完了
 
 [portfolio-rag-assistant のリンク](/projects/portfolio-rag-assistant/README.md)
-
----
 
 
 ---
@@ -136,30 +139,51 @@ Embedding・ベクトル検索・LLM API を組み合わせ、自然言語によ
 
 ### Machine Learning
 
-- Python
-- pandas
-- numpy
-- scikit-learn
-- LightGBM
-- XGBoost
-- MLflow
-- SHAP
+* Python
+* pandas
+* numpy
+* scikit-learn
+* LightGBM
+* XGBoost
+* MLflow
+* SHAP
+* Support Vector Machine(SVM)
+
+### LLM / RAG
+
+* Gemini API
+* Sentence Transformers
+* ChromaDB
+* Vector Search
+* Embedding
+* Retrieval-Augmented Generation (RAG)
+* Prompt Engineering
 
 ### MLOps
 
-- Docker
-- AWS SageMaker
-- AWS ECR
-- boto3
+* Docker
+* AWS SageMaker
+* AWS ECR
+* boto3
 
-### Modeling Topics
+### Application
 
-- Time Series Forecasting
-- Binary Classification
-- Class Imbalance Handling
-- Ensemble Learning (Stacking)
-- Feature Engineering
-- Model Interpretation
+* Streamlit
+* FastAPI
+
+### Machine Learning Topics
+
+* Time Series Forecasting
+* Binary Classification
+* Class Imbalance Handling
+* Feature Engineering
+* Feature Scaling
+* Ensemble Learning (Stacking)
+* Threshold Optimization
+* Model Interpretation
+* Experiment Tracking
+
+
 
 ---
 
