@@ -18,6 +18,9 @@ __pycache__/
 **/model/*
 **/model.tar.gz
 
+# ベクトルデータベース
+**/chroma_db/
+
 # awsの設定情報
 **/.aws/credentials
 **/.aws/config

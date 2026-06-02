@@ -94,6 +94,40 @@ Banking Marketing Dataset を用いた定期預金契約有無の分類予測。
 
 [banking-marketingのリンク](/projects/banking-marketing/README.md)
 
+
+## 4. portfolio-rag-assistant
+
+ポートフォリオおよび機械学習プロジェクトのドキュメントを対象とした RAG (Retrieval-Augmented Generation) アプリケーション。
+
+Embedding・ベクトル検索・LLM API を組み合わせ、自然言語によるプロジェクト検索および質問応答を実装。
+
+### What I tried
+
+* Sentence Transformers による Embedding
+* ChromaDB による Vector Database
+* Cosine Similarity を用いたベクトル検索
+* Chunking
+* Metadata 管理
+* Retrieval-Augmented Generation (RAG)
+* Gemini API
+* Prompt Engineering
+
+### Current Status
+
+* Embedding による意味ベクトル化を実装
+* Cosine Similarity による類似文検索を実装
+* ChromaDB によるベクトル検索を実装
+* Chunk Size / Top-K の挙動を検証
+* Gemini API を利用した回答生成を実装
+* RAG によるプロジェクト横断検索を実装
+* Prompt Engineering による回答品質改善を実施
+* Streamlit アプリ化を予定
+
+[portfolio-rag-assistant のリンク](/projects/portfolio-rag-assistant/README.md)
+
+---
+
+
 ---
 
 # Tech Stack
