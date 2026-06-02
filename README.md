@@ -5,6 +5,8 @@
 portfolio リポジトリとは別に、  
 「技術を試す場所」として運用しています。
 
+[portfolioはこちら](https://github.com/usapyon549/portfolio)
+
 ---
 
 # Purpose
