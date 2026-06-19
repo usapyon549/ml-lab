@@ -42,9 +42,9 @@ portfolio リポジトリとは別に、
 
 ### Current status
 
-- baseline → feature engineering により精度改善
-- MLflow による実験管理を導入
-- Docker container で推論実行を確認
+- ベースラインから特徴量エンジニアリングにより精度を改善
+- MLflow による実験管理フローを構築
+- Docker コンテナ上で推論が実行できることを確認
 
 [電力需要予測のリンク](/projects/electricity-demand-forecast/README.md)
 
@@ -91,8 +91,7 @@ Banking Marketing Dataset を用いた定期預金契約有無の分類予測。
 - 不均衡データにおける Accuracy の限界を確認
 - class_weight による Recall 改善を確認
 - SVM における標準化の重要性を確認
-- StackingClassifier によるアンサンブル学習を検証
-- 単体モデルとアンサンブルモデルの性能差を比較
+- StackingClassifier を検証したが、単体モデルを上回る性能向上は確認できなかった
 
 [banking-marketingのリンク](/projects/banking-marketing/README.md)
 
@@ -154,16 +153,16 @@ SentenceTransformer、ChromaDB、Gemini API を組み合わせ、
 * Gemini API
 * Sentence Transformers
 * ChromaDB
-* Vector Search
 * Embedding
+* Vector Search
 * Retrieval-Augmented Generation (RAG)
 * Prompt Engineering
 
 ### MLOps
 
 * Docker
-* AWS SageMaker
 * AWS ECR
+* AWS SageMaker
 * boto3
 
 ### Application
@@ -191,3 +190,4 @@ SentenceTransformer、ChromaDB、Gemini API を組み合わせ、
 
 - Notebook ベースで軽量に実験
 - 試行錯誤の過程も一部含みます
+- 完成品よりも、技術検証や学習ログを重視したリポジトリとして運用しています
