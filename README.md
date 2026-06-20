@@ -7,25 +7,6 @@ portfolio リポジトリとは別に、
 
 [portfolioはこちら](https://github.com/usapyon549/portfolio)
 
----
-
-# Purpose
-
-- MLOps 技術に触れる
-- Docker / AWS / MLflow などの周辺技術を試す
-- 学習ログ・試行錯誤を残す
-
-完成度の高い portfolio というより、
-
-- 実験
-- 検証
-- 学習記録
-- 試作
-
-を目的とした repository です。
-
----
-
 # Projects
 
 ## 1. electricity-demand-forecast
@@ -46,7 +27,7 @@ portfolio リポジトリとは別に、
 - MLflow による実験管理フローを構築
 - Docker コンテナ上で推論が実行できることを確認
 
-[電力需要予測のリンク](/projects/electricity-demand-forecast/README.md)
+[電力需要予測のリンク](/projects/001-electricity-demand-forecast/README.md)
 
 ## 2. demand-forecast-sagemaker-deploy
 
@@ -68,7 +49,7 @@ Amazon SageMaker のサーバーレスエンドポイントへデプロイ。
 - notebook から推論レスポンス取得済み
 - ハマりどころ・対応内容を README に整理
 
-[電力需要予測モデルのSageMakerデプロイのリンク](/projects/demand-forecast-sagemaker-deploy/README.md)
+[電力需要予測モデルのSageMakerデプロイのリンク](/projects/002-demand-forecast-sagemaker-deploy/README.md)
 
 ## 3. banking-marketing
 
@@ -93,7 +74,7 @@ Banking Marketing Dataset を用いた定期預金契約有無の分類予測。
 - SVM における標準化の重要性を確認
 - StackingClassifier を検証したが、単体モデルを上回る性能向上は確認できなかった
 
-[banking-marketingのリンク](/projects/banking-marketing/README.md)
+[banking-marketingのリンク](/projects/003-banking-marketing/README.md)
 
 
 ## 4. portfolio-rag-assistant
@@ -129,7 +110,7 @@ SentenceTransformer、ChromaDB、Gemini API を組み合わせ、
 * Streamlit Cache により Embedding モデルの再ロードを防止
 * Portfolio RAG Assistant として動作確認完了
 
-[portfolio-rag-assistant のリンク](/projects/portfolio-rag-assistant/README.md)
+[portfolio-rag-assistant のリンク](/projects/004-portfolio-rag-assistant/README.md)
 
 
 ---
