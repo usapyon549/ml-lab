@@ -2,6 +2,10 @@
 # Portfolio project ignores
 # ========================
 
+# output
+**/output
+**/outputs
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -34,6 +38,7 @@ __pycache__/
 **/メモ.txt
 **/memo.txt
 **/tmp.txt
+**/memo/*
 
 # macOS
 .DS_Store

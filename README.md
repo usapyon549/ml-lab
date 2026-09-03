@@ -1,6 +1,6 @@
 # ml-lab
 
-機械学習・MLOps・LLM 周辺技術の軽量実験リポジトリ。
+機械学習・MLOps・LLM 周辺技術の軽量実験リポジトリです。
 
 portfolio リポジトリとは別に、  
 「技術を試す場所」として運用しています。
@@ -111,6 +111,32 @@ SentenceTransformer、ChromaDB、Gemini API を組み合わせ、
 * Portfolio RAG Assistant として動作確認完了
 
 [portfolio-rag-assistant のリンク](/projects/004-portfolio-rag-assistant/README.md)
+
+## 5. forest-cover-type-classification
+
+森林の土地被覆タイプを予測する分類問題を用いて、
+**学習データ量や特徴量数がモデル性能に与える影響を検証。**
+
+### What I tried
+
+* LightGBM による多クラス分類
+* 特徴量数を変更したモデル性能の比較
+* 学習データ量を変更したモデル性能の比較
+* ランダムな特徴量選択による複数回実験
+* Precision / Recall / F1 によるクラス別評価
+* Macro F1 / Weighted F1 による全体評価
+* 特徴量数と学習データ量を組み合わせた実験
+
+### Current status
+
+* 10 / 20 / 30 / 40 特徴量でモデル性能を比較
+* ランダムな特徴量選択を複数回行い、結果のばらつきを確認
+* 54特徴量を固定して学習データ量を変更し、性能への影響を検証
+* 特徴量数と学習データ量の両方を変更した実験を実施
+* データ量の減少に伴うクラスごとの性能変化を確認
+* Accuracy だけでは捉えにくい少数クラスへの影響を、Macro F1 やクラス別 F1 から確認
+
+[forest-cover-type-classification のリンク](/projects/005-forest-cover-type-classification/README.md)
 
 
 ---
