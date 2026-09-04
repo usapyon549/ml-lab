@@ -180,7 +180,7 @@ SentenceTransformer、ChromaDB、Gemini API を組み合わせ、
 ### Machine Learning Topics
 
 * Time Series Forecasting
-* Binary Classification
+* Binary / Multiclass Classification
 * Class Imbalance Handling
 * Feature Engineering
 * Feature Scaling
@@ -188,6 +188,8 @@ SentenceTransformer、ChromaDB、Gemini API を組み合わせ、
 * Threshold Optimization
 * Model Interpretation
 * Experiment Tracking
+* Feature Selection
+* Data Size Analysis
 
 
 
