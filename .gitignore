@@ -2,6 +2,9 @@
 # Portfolio project ignores
 # ========================
 
+# LightRAGのstrage
+**/rag_storage
+
 # output
 **/output
 **/outputs

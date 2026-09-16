@@ -138,6 +138,32 @@ SentenceTransformer、ChromaDB、Gemini API を組み合わせ、
 
 [forest-cover-type-classification のリンク](/projects/005-forest-cover-type-classification/README.md)
 
+## 6. portfolio-knowledge-graph-rag
+
+ポートフォリオのREADME群を対象に、
+**通常のRAGとKnowledge Graph RAGで、文書間の関係性を考慮した検索・回答にどのような違いが生じるかを検証。**
+
+### What I tried
+
+* LightRAG によるKnowledge Graph RAGの構築
+* Ollama / BGE-M3 によるローカルEmbedding
+* Gemini API によるエンティティ・関係抽出および回答生成
+* Hybrid Search によるKnowledge Graph RAGの検索
+* 通常のRAGとの回答内容の比較(004-portfolio-rag-assistantとの比較)
+* Knowledge Graphの可視化
+* 複数の質問パターンによる回答傾向の比較
+
+### Current status
+
+* ポートフォリオのREADME群をKnowledge Graphとしてインデックス化
+* LightRAGによるHybrid Searchで回答を生成
+* 通常のRAGとKnowledge Graph RAGで同一質問への回答を比較
+* プロジェクト横断の関連性や共通する技術要素について、Knowledge Graph RAGのほうが関係性を捉えやすいケースを確認
+* PyVisによるKnowledge Graphの可視化を実施
+* Knowledge Graphは入力文書に記載された情報・関係性をもとに構築されるため、元文書の記述内容が検索・回答の品質に影響することを確認
+
+[knowledge-graph-rag のリンク](./projects/006-portfolio-knowledge-graph-rag/README.md)
+
 
 ---
 
@@ -164,6 +190,9 @@ SentenceTransformer、ChromaDB、Gemini API を組み合わせ、
 * Vector Search
 * Retrieval-Augmented Generation (RAG)
 * Prompt Engineering
+* Knowledge-graph-rag
+* LightRAG
+* Ollama
 
 ### MLOps
 
