@@ -38,7 +38,7 @@ LightRAGを用いたKnowledge Graph RAGの構築と、通常のRAGとの比較�
 
 当初はKnowledge Graph RAGの実装としてMicrosoft GraphRAGも候補として検討した。
 
-しかし、GraphRAGではインデックス構築の計算コストが大きく、今回利用しているGemini APIの無料枠にも制約があるため、軽量に試行しやすいLightRAGを採用した。
+しかし、GraphRAGではインデックス構築の計算コストが大きく(基本的に、グラフの全構築が必要であるため)、今回利用しているGemini APIの無料枠にも制約があるため、軽量に試行しやすいLightRAG(グラフの一部アップデートが可能なため)を採用した。
 
 LightRAGでは、Knowledge Graphを利用した検索を比較的シンプルな構成で試すことができ、今回の「通常RAGとの違いを確認する」という目的にも適していると判断した。
 
