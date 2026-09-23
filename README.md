@@ -165,6 +165,36 @@ SentenceTransformer、ChromaDB、Gemini API を組み合わせ、
 [knowledge-graph-rag のリンク](./projects/006-portfolio-knowledge-graph-rag/README.md)
 
 
+## 7. toy-llm-adversarial-data
+
+小規模なTransformerをPyTorchで自作し、
+**正しい計算ルール・偽の計算ルール・ルールのないランダムなデータを混ぜたとき、モデルの出力がどのように変化するかを検証。**
+
+### What I tried
+
+* PyTorchによる小規模Transformerの実装
+* Character-level Tokenization
+* Token Embedding / Position Embeddingの実装
+* Causal MaskによるDecoder-only型に近い構成の実装
+* Paddingおよび`ignore_index`を利用したLoss計算
+* 正しい計算ルールと偽の計算ルールを混ぜた学習
+* ルールのないランダムデータを混ぜた場合の出力変化を比較
+* データ比率によるモデルの出力傾向の比較
+
+### Current status
+
+* PyTorchによる小規模Transformerを実装
+* `x+y=x+y`の正しい計算ルールを学習できることを確認
+* `x+y=xy`の偽の計算ルールを混ぜた場合の出力変化を検証
+* 正しいルール・偽のルール・ランダムデータの比率を変えて、1000件の予測結果を比較
+* 学習データ中のルールの比率によって、モデルが出力するルールの傾向が変化することを確認
+* Position EmbeddingやPaddingなど、Transformerによる系列データ学習に必要な要素を実装・検証
+* 学習データの構成や系列長の違いが、学習結果に影響する可能性について考察
+* 学習したルールの獲得と、単純なデータの記憶・一般化を区別できていない点を課題として整理
+
+[toy-llm-adversarial-data のリンク](./projects/007-toy-llm-adversarial-data/README.md)
+
+
 ---
 
 # Tech Stack
@@ -180,6 +210,7 @@ SentenceTransformer、ChromaDB、Gemini API を組み合わせ、
 * MLflow
 * SHAP
 * Support Vector Machine(SVM)
+* PyTorch
 
 ### LLM / RAG
 
@@ -193,6 +224,9 @@ SentenceTransformer、ChromaDB、Gemini API を組み合わせ、
 * Knowledge-graph-rag
 * LightRAG
 * Ollama
+* Transformer
+* Tokenization
+* Position Embedding
 
 ### MLOps
 
@@ -219,8 +253,8 @@ SentenceTransformer、ChromaDB、Gemini API を組み合わせ、
 * Experiment Tracking
 * Feature Selection
 * Data Size Analysis
-
-
+* Transformer / Attention
+* Sequence Modeling
 
 ---
 
