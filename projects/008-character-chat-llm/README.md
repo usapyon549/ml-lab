@@ -1,4 +1,4 @@
-# Character Chat LLM
+# character-chat-LLM
 
 軽量LLMを用いたキャラクター会話を題材に、プロンプトエンジニアリング、Few-shot、LoRAによるキャラクター表現の再現性と、回答品質・指示追従への影響を比較する実験。
 

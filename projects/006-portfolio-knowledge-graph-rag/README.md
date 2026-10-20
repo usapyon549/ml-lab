@@ -1,5 +1,5 @@
 
-# Knowledge Graph RAG
+# knowledge-graph-RAG
 
 LightRAGを用いたKnowledge Graph RAGの構築と、通常のRAGとの比較検証。
 
